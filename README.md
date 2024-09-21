@@ -1,13 +1,13 @@
 ## Schnellanleitung ##
 
-```wget https://raw.githubusercontent.com/lofentblack/Teamspeak-3-Skript/refs/heads/main/Teamspeak3-Skript.sh```
+```wget https://raw.githubusercontent.com/lofentblack/isAlive-Skript/refs/heads/main/isAlive-Skript.sh```
 
-```chmod 775 Teamspeak3-Skript.sh```
+```chmod 775 isAlive-Skript.sh```
 
-```./Teamspeak3-Skript.sh```
+```./isAlive-Skript.sh```
 
 
-## Teamspeak-Server-Verwaltungsskript ##
+## Portüberwachungsskript ##
 
 Dieses Shell-Skript dient zur Vereinfachung der Verwaltung von Prozessen.
 
