@@ -1,0 +1,30 @@
+Copyright (c) 2018, LofentBlack.de
+
+Dieses Batch-Skript wird unter den folgenden Bedingungen lizenziert:
+
+1. **Erlaubte Nutzung**: 
+   - Dieses Skript darf für persönliche, nicht-kommerzielle Zwecke verwendet und modifiziert werden.
+
+2. **Verbot der Weiterverbreitung**:
+   - Es ist nicht erlaubt, dieses Skript oder modifizierte Versionen davon in irgendeiner Form zu veröffentlichen, zu verteilen oder an Dritte weiterzugeben.
+
+3. **Anerkennung des Autors**:
+   - Modifikationen des Skripts dürfen nicht als eigenes Werk ausgegeben werden. Jeder Hinweis auf den ursprünglichen Autor darf nicht entfernt oder verändert werden.
+
+4. **Keine Gewährleistung**:
+   - Dieses Skript wird "wie es ist" ohne Garantie zur Verfügung gestellt. Der Autor übernimmt keine Verantwortung für etwaige Schäden, die durch die Nutzung des Skripts entstehen.
+
+
+This batch script is licensed under the following terms:
+
+1. **Permitted Use**: 
+   - This script may be used and modified for personal, non-commercial purposes.
+
+2. **Prohibition of redistribution**:
+   - It is not permitted to publish, distribute or pass on this script or modified versions of it to third parties in any form.
+
+3 **Acknowledgment of the author**:
+   - Modifications of the script may not be passed off as the author's own work. Any reference to the original author may not be removed or altered.
+
+4 **No Warranty**:
+   - This script is provided "as is" without warranty. The author assumes no responsibility for any damages resulting from the use of the script.
