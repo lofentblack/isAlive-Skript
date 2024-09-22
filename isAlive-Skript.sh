@@ -93,9 +93,9 @@ cd /$SCRIPTPATH
 			  Empfanger=$varer2
 			else
 				if ! [[ "$Test" == *"E-Mail-sender"* ]]; then
-					echo $(tput setaf 1)'Das Feld "E-Mail-senden" ist leer oder nicht Korrekt Ausgefüllt worden'
+					echo $(tput setaf 1)'Das Feld "E-Mail-senden" ist leer oder nicht korrekt ausgefüllt worden'
 				elif ! [[ "$Test" == *"E-Mail-empfanger"* ]]; then
-					echo $(tput setaf 1)'Das Feld "E-Mail-empfanger" ist leer oder nicht Korrekt Ausgefüllt worden'
+					echo $(tput setaf 1)'Das Feld "Das Feld "E-Mail-empfanger" ist leer oder nicht korrekt ausgefüllt worden'
 				else
 					echo $FEHLER2
 				fi
@@ -214,9 +214,9 @@ Port_richtigkeits_Test() {
 			  Empfanger=$varer2
 			else
 				if ! [[ "$Test" == *"E-Mail-sender"* ]]; then
-					echo $(tput setaf 1)'Das Feld "E-Mail-senden" ist leer oder nicht Korrekt Ausgefüllt worden'
+					echo $(tput setaf 1)'Das Feld "E-Mail-senden" ist leer oder nicht korrekt ausgefüllt worden'
 				elif ! [[ "$Test" == *"E-Mail-empfanger"* ]]; then
-					echo $(tput setaf 1)'Das Feld "E-Mail-empfanger" ist leer oder nicht Korrekt Ausgefüllt worden'
+					echo $(tput setaf 1)'Das Feld "E-Mail-empfanger" ist leer oder nicht korrekt ausgefüllt worden'
 				else
 					echo $FEHLER2
 				fi
@@ -303,7 +303,7 @@ sleep 10
 
 clear
 clear
-echo $gruen"Bitte starte das Script neu!"
+echo $gruen"Bitte starte das Skript neu!"
 echo "$(tput sgr0)"
 
 }
@@ -348,24 +348,24 @@ fi
 
 	echo -e '#################################################################################
 ##                                                                             ##
-## Sie müssen unten immer ein port und ein port Dienst eingeben.               ##
+## Sie müssen unten immer ein Port und ein Port Dienst eingeben.               ##
 ## Als Beispiel port17-port="123" und port17-dienst="Test_Port"                ##
 ##                        /\               /\                                  ##
 ##                        ||               ||                                  ##
 ##                        ||               ||                                  ##
 ##                        ||               ||                                  ##
-## 1) Es MUSS immer ein port               ||                                  ##
-## angegeben werden zu überprüfung         ||                                  ##
+## 1) Es MUSS immer ein Port               ||                                  ##
+## angegeben werden zu Überprüfung         ||                                  ##
 ##                                         ||                                  ##
-## 2) Ebenfall ist es wichtig dass ein port dienst, damit dies                 ##
-## in der E Mail Angeben werden kann.                                          ##
+## 2) Ebenfalls ist es wichtig, dass ein Port dienst, damit dies               ##
+## in der E-Mail Angeben werden kann.                                          ##
 ##                                                                             ##
 ## Wird eines dieser Bedingungen nicht erfüllt wird der Port nicht Überwacht.  ##
-## Zum Aktivieren muss die raute(#) vor dem port entfernt werden.              ##
+## Zum Aktivieren muss die raute(#) vor dem Port entfernt werden.              ##
 ##                                                                             ##
-##    !!! Ebenfalls darf sich keine raute(#) in den port-dienst befinden !!!   ##
+##    !!! Ebenfalls darf sich keine raute(#) in den Port-dienst befinden !!!   ##
 ##                                                                             ##
-##  Es können bis zu 1000 Ports insgesamt bestehen. dabei sollten die nummern  ##
+##  Es können bis zu 1000 Ports insgesamt bestehen. Dabei sollten die nummern  ##
 ##             möglichts immer Zählweise fortlaufend entsprechen.              ##
 ##                                                                             ##
 #################################################################################
@@ -438,7 +438,7 @@ LOGO() {
 	echo "$(tput setaf 2)"
 	figlet -f slant -c $SCRIPTNAME
 	echo $rot
-	echo "Mit dem Ausführen Akzeptieren Sie die Lizenz"
+	echo "Mit dem Ausführen Akzeptieren Sie die Lizenz von lofentblack.de/licence"
 	echo "$(tput sgr0)"
 	status_test
 	echo $gelb"Die Überwachung ist momentan: "$status
@@ -553,7 +553,7 @@ LOGO() {
 		fi
 	else
 		echo ""
-		echo $gruen"Dann noch einen Schönen Tag!"
+		echo $gruen"Dann noch einen schönen Tag!"
 		echo "$(tput sgr0)"
 	fi
 
