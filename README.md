@@ -6,10 +6,11 @@
 
 ```./isAlive-Skript.sh```
 
+<img src="https://i.ibb.co/RBWFpjs/alive.png" alt="alive" border="0">
 
 ## Portüberwachungsskript ##
 
-Dieses Shell-Skript dient zur Vereinfachung der Verwaltung von Prozessen.
+Mit diesem Skript kann man seine offenen Ports überwachen lassen, sodass man direkt eine E-Mail erhält, wenn einer der Ports ausfällt.
 
 
 ## Installation ##
