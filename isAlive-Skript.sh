@@ -15,7 +15,7 @@ status="Ausgeschaltet"
 
 # Fehler Codes
 FEHLER1='Fehler! Crontab wurde noch nicht benutzt oder ist nicht installiert. (Fehlercode 01)'
-FEHLER2='Fehler! Der Sender oder dem Empeanger ist unbekannt. (FehlerCode2)'
+FEHLER2='Fehler! Der Sender oder dem Empfeanger ist unbekannt. (FehlerCode2)'
 
 # Script Verzeichniss
 	reldir=`dirname $0`
@@ -203,7 +203,6 @@ Port_richtigkeits_Test() {
 	  Zeile=$(sed -n "${LaufZeile}p" ${INPUTDATEI})
 	  Test=${Zeile}
 
-		#echo "$Test enthält den String E-Mail."
 		if [[ "$Test" == *"E-Mail"* ]]; then
 			if [[ "$Test" == *"E-Mail-sender"* ]]; then
 			  var1=$(sed 's/E-Mail-sender=//' <<< "$Test")
@@ -234,7 +233,7 @@ Port_richtigkeits_Test() {
 	echo "$(tput setaf 2)"
 	figlet -f slant -c $SCRIPTNAME
 	echo $rot
-	echo "Mit dem Ausführen Akzeptieren Sie die Lizenz"
+	echo "Mit dem Ausführen Akzeptieren Sie die Lizenz von lofentblack.de/licence"
 	echo "$(tput sgr0)"
 	echo "Die folgenden Ports können überwacht werden:"
 	echo " "
