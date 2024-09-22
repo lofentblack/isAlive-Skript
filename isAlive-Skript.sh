@@ -51,11 +51,11 @@ if ! [[ $version == $SkriptVersion ]]; then
 
 	echo $(tput setaf 3)"Update von Version "$SkriptVersion" zu "$version"."
 	echo "$(tput sgr0)"
-	wget https://raw.githubusercontent.com/lofentblack/isAlive-Skript/refs/heads/main/isAlive-Skript.sh -O isAlive-Skript-new.sh
+	wget https://raw.githubusercontent.com/lofentblack/isAlive-Skript/refs/heads/main/isAlive-Skript.sh -O isAlive-Skript.new.sh
 	rm $LOCK
-	chmod 775 isAlive-Skript-new.sh
+	chmod 775 isAlive-Skript.new.sh
 	rm isAlive-Skript.sh
-	mv isAlive-Skript-new.sh isAlive-Skript.sh
+	mv isAlive-Skript.new.sh isAlive-Skript.sh
 
 fi
 }
