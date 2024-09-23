@@ -2,7 +2,7 @@
 
 # Gucken ob der Benutzer root ist
 if [ "$(id -u)" != "0" ]; then
-  echo $(tput setaf 1)Bitte wechseln Sie zu einem Admin/Root Benutzer$(tput sgr0)
+  echo $(tput setaf 1)Bitte wechseln Sie zu einem Root Benutzer$(tput sgr0)
   exit 1;
 fi
 
@@ -49,7 +49,7 @@ if ! [[ $version == $SkriptVersion ]]; then
 	clear
 	clear
 
-	echo $(tput setaf 3)"Update von Version "$SkriptVersion" zu "$version"."
+	echo $(tput setaf 3)"Update verfügbar! Update von "$SkriptVersion" zu "$version"." 
 	echo "$(tput sgr0)"
 	wget https://raw.githubusercontent.com/lofentblack/isAlive-Skript/refs/heads/main/isAlive-Skript.sh -O isAlive-Skript.new.sh
 	rm $LOCK
@@ -93,9 +93,9 @@ cd /$SCRIPTPATH
 			  Empfanger=$varer2
 			else
 				if ! [[ "$Test" == *"E-Mail-sender"* ]]; then
-					echo $(tput setaf 1)'Das Feld "E-Mail-senden" ist leer oder nicht korrekt ausgefüllt worden'
+					echo $(tput setaf 1)'Das Feld "E-Mailsenden" ist leer oder nicht korrekt ausgefüllt worden'
 				elif ! [[ "$Test" == *"E-Mail-empfanger"* ]]; then
-					echo $(tput setaf 1)'Das Feld "Das Feld "E-Mail-empfanger" ist leer oder nicht korrekt ausgefüllt worden'
+					echo $(tput setaf 1)'Das Feld "E-Mailempfanger" ist leer oder nicht korrekt ausgefüllt worden'
 				else
 					echo $FEHLER2
 				fi
@@ -125,7 +125,7 @@ cd /$SCRIPTPATH
 		if ! [ -s port_error_$1.txt ]; then
 			if [ -z "$port" ]; then
 		    	> port_error_$1.txt
-				echo -e "port: "$1"\t exestiert nicht!\t Dienst: "$2" Versuch um: $DATE" >> port_error_$1.txt
+				echo -e "Port: "$1"\t exestiert nicht!\t Dienst: "$2" Versuch um: $DATE" >> port_error_$1.txt
 				send_mail $1 $2
 			fi		
 		else
@@ -233,7 +233,7 @@ Port_richtigkeits_Test() {
 	echo "$(tput setaf 2)"
 	figlet -f slant -c $SCRIPTNAME
 	echo $rot
-	echo "Mit dem Ausführen Akzeptieren Sie die Lizenz von lofentblack.de/licence"
+	echo "Mit dem download akzeptieren Sie die Lizenz von lofentblack.de/licence"
 	echo "$(tput sgr0)"
 	echo "Die folgenden Ports können überwacht werden:"
 	echo " "
@@ -297,13 +297,13 @@ sudo apt-get install screen -y
 screen=instalations_packete_lb.de_script
 screen -Sdm $screen apt-get install figlet -y && screen -Sdm $screen sudo apt-get upgrade -y && screen -Sdm $screen sudo apt-get install cron -y
 
-echo "Notwendige Pakete Installiert"
+echo "Notwendige Pakete sind nun installiert"
 
 sleep 10
 
 clear
 clear
-echo $gruen"Bitte starte das Skript neu!"
+echo $gruen"Bitte starten Sie das Skript neu!"
 echo "$(tput sgr0)"
 
 }
@@ -438,17 +438,17 @@ LOGO() {
 	echo "$(tput setaf 2)"
 	figlet -f slant -c $SCRIPTNAME
 	echo $rot
-	echo "Mit dem Ausführen Akzeptieren Sie die Lizenz von lofentblack.de/licence"
+	echo "Mit dem download akzeptieren Sie die Lizenz von lofentblack.de/licence"
 	echo "$(tput sgr0)"
 	status_test
 	echo $gelb"Die Überwachung ist momentan: "$status
 	echo "$(tput sgr0)"
-	echo "1) Einstellungen der Ports Testen"
-	echo "2) Überwachung Aktivieren"
-	echo "3) Überwachung Deaktivieren"
-	echo "4) Vorlage erneut Generieren"
+	echo "1) Einstellungen der Ports testen"
+	echo "2) Überwachung aktivieren"
+	echo "3) Überwachung deaktivieren"
+	echo "4) Vorlage erneut generieren"
 	echo "5) Beenden"
-	read -p "Was willst du tun? " machen
+	read -p "Was willst möchten Sie machen? " machen
 }
 
   if [ -s $SCRIPTPATH/$LOCK ]; then
@@ -465,7 +465,7 @@ LOGO() {
 		if [ $status == "Eingeschaltet" ]; then
 			clear
 			clear
-			echo $gelb"Die Überwachung ist bereits Eingeschaltet"
+			echo $gelb"Die Überwachung ist bereits eingeschaltet"
 			sleep 2
 			LOGO
 		fi
@@ -502,7 +502,7 @@ LOGO() {
 		if [ $status == "Ausgeschaltet" ]; then
 			clear
 			clear
-			echo $gelb"Die Überwachung ist bereits Ausgeschaltet"
+			echo $gelb"Die Überwachung ist bereits ausgeschaltet"
 			sleep 2
 			LOGO
 		fi
@@ -538,28 +538,28 @@ LOGO() {
 	elif [ $machen == "4" ]; then
 		cd $SCRIPTPATH
 		echo $rot"Wenn eine neue Vorlage generiert wird, wird die alte automatisch überschrieben."
-		read -p "Sind sie sich sicher? (Y/N) " sicherheit
+		read -p "Sind Sie sich sicher? (Y/N) " sicherheit
 		if [ $sicherheit = "y" ] || [ $sicherheit = "Y" ] || [ $sicherheit = "J" ] || [ $sicherheit = "j" ] || [ $sicherheit = "ja" ] || [ $sicherheit = "Ja" ] || [ $sicherheit = "Yes" ] || [ $sicherheit = "yes" ] || [ $sicherheit = "ok" ] || [ $sicherheit = "Ok" ] || [ $sicherheit = "OK" ] || [ $sicherheit = "oK" ] || [ $sicherheit = "JA" ] || [ $sicherheit = "jA" ] || [ $sicherheit = "YES" ] || [ $sicherheit = "YEs" ] || [ $sicherheit = "yES" ] || [ $sicherheit = "yeS" ] || [ $sicherheit = "YeS" ] || [ $sicherheit = "yES" ] || [ $sicherheit = "yEs" ]; then
 			echo ""
-			echo $gruen"Die Vorlage wurde Erneut generiert."
 			echo "$(tput sgr0)"
 			vorlage_generieren
+			echo $gruen"Die Vorlage wurde erneut generiert."
 			sleep 2
 			LOGO
 		else
 			echo ""
-			echo $gruen"Vorgang Abgebrochen."
+			echo $gruen"Vorgang abgebrochen."
 			echo "$(tput sgr0)"
 		fi
 	else
 		echo ""
-		echo $gruen"Dann noch einen schönen Tag!"
+		echo $gruen"Einen schönen Tag!"
 		echo "$(tput sgr0)"
 	fi
 
 	elif ! [ -s $SCRIPTPATH/$LOCK ]; then
     > $LOCK
-    echo -e 'int=true\nversion="'$Version'"\n\n#Mit dieser Datei erkennt das Skript das alle notwendigen Pakete installiert worden sind und das die Vorlage erstellt wurde. Sollte diese Datei gelöscht werden oder der Namen geändert werden\nDann wird die Vorlage die alte config Datei überschreiben und das Skript neu Installieren.' > $SCRIPTPATH/$LOCK
+    echo -e 'int=true\nversion="'$Version'"\n\n#Mit dieser Datei erkennt das Skript das alle notwendigen Pakete installiert worden sind und das die Vorlage erstellt wurde. Sollte diese Datei gelöscht werden oder der Namen geändert werden\ndann wird die Vorlage die alte Config Datei überschreiben und das Skript neu Installieren.' > $SCRIPTPATH/$LOCK
     vorlage_generieren
     installations_packete
 fi
